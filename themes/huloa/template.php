@@ -3,12 +3,6 @@
  * @file
  * The primary PHP file for this theme.
  */
-function huloa_preprocess_html(&$variables) {
-  drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css', array('type' => 'external'));
-  drupal_add_css('https://fonts.googleapis.com/css?family=Montserrat:400,500,700', array('group' => CSS_THEME));
-}
-
-
 function huloa_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     // Language dropdown - add flag
