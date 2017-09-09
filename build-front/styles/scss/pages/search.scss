@@ -1,0 +1,91 @@
+.search-results {
+  .views-row {
+    > .views-field {
+      margin: 5px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .direct-link {
+      text-decoration: none;
+      color: #333333;
+      display: block;
+      border: 1px solid #eee;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      overflow: hidden;
+
+      &:hover {
+        background: #F6F6F6;
+      }
+
+      .views-field-nid {
+        display: none;
+      }
+    }
+
+    .more-link {
+      color: #0091ad; //todo
+    }
+
+    .views-field-field-school-area-1 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .views-field-field-school-name,
+    .views-field-field-school-name-jp {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .views-field-field-school-name-jp {
+      margin-top: -5px;
+    }
+
+    .views-field-field-school-image {
+      overflow: hidden;
+      width: 100px;
+      float: left;
+      margin-right: 10px;
+
+      img {
+        width: 100%;
+        @include transition($transition);
+
+        &:hover {
+          @include transform(scale(1.1));
+        }
+      }
+    }
+
+    .views-field-field-school-nearest-station {
+      clear: both;
+    }
+
+    .views-field-field-school-nearest-station,
+    .views-field-field-school-student-capacity,
+    .views-field-field-school-number-classroom,
+    .views-field-field-school-feature {
+      > span {
+        font-weight: 500;
+        margin-right: 10px;
+      }
+
+      > .field-content {
+        display: inline;
+      }
+    }
+
+    .views-field-field-school-introduction {
+      clear: both;
+      padding: 10px;
+      position: relative;
+      top: 5px;
+      background: #F6F6F6;
+    }
+  }
+}
