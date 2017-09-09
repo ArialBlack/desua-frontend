@@ -1,0 +1,14 @@
+// Bootstrap variables.
+@import '../bootstrap/assets/stylesheets/bootstrap/variables';
+
+// Overwrite variables
+@import './default-variables';
+
+// Bootstrap mixins
+@import '../bootstrap/assets/stylesheets/bootstrap/mixins';
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+}
+
