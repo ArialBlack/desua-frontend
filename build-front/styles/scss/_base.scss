@@ -136,21 +136,41 @@ h6 {
   }
 }
 
-.breadcrumb {
-  padding: 0;
-  background: none;
-  margin-bottom: 40px;
-  border-left: 3px solid $brand-primary;
-  padding-left: 10px;
-  border-radius: 0;
+.bcc {
+  .breadcrumb {
+    padding: 0;
+    background: none;
+    margin-bottom: 40px;
+    border-left: 3px solid $brand-primary;
+    padding-left: 10px;
+    border-radius: 0;
 
-  a {
-    font-weight: 500;
+    a {
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .breadcrumb {
+      white-space: nowrap;
+    }
   }
 }
 
+
+
 .page-header {
-  font-size: 47px;
+  font-size: 27px; //47
   color: #333;
   margin-bottom: 25px;
   font-weight: 500;
