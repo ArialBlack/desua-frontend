@@ -77,7 +77,7 @@ h6 {
 }
 
 .main-container {
-  margin-top: 45px;
+  margin-top: 25px;
 }
 
 .sidebar {
@@ -140,10 +140,14 @@ h6 {
   .breadcrumb {
     padding: 0;
     background: none;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     border-left: 3px solid $brand-primary;
     padding-left: 10px;
     border-radius: 0;
+
+    > li + li:before {
+      content: "> ";
+    }
 
     a {
       font-weight: 500;
@@ -170,7 +174,7 @@ h6 {
 
 
 .page-header {
-  font-size: 27px; //47
+  font-size: 47px;
   color: #333;
   margin-bottom: 25px;
   font-weight: 500;
@@ -383,85 +387,6 @@ body.show-nav {
   }
 }
 
-.views-field-field-school-nearest-station,
-.views-field-field-school-feature {
-  > .field-content {
-    * {
-      display: inline;
-      padding: 0;
-      margin: 0;
-    }
-
-    li {
-      &:before {
-        font-family: "Glyphicons Halflings";
-        position: relative;
-        top: -2px;
-        font-size: 9px;
-        content: "\e080";
-        color: $brand-primary;
-        margin-right: 5px;
-      }
-      margin-right: 10px;
-    }
-  }
-}
-
-.views-field-field-school-address .field-content:before,
-.field-name-field-school-address .field-item:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e021";
-  margin-right: 8px;
-}
-
-.views-field-field-school-nearest-station:before,
-.field-name-field-school-nearest-station:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e024";
-  margin-right: 4px;
-}
-
-.views-field-field-school-student-capacity:before,
-.field-name-field-school-student-capacity:before,
-.field-name-field-school-number-staff:before,
-.field-name-field-school-number-staff-fullti:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e008";
-  margin-right: 4px;
-}
-
-.views-field-field-school-number-classroom:before,
-.field-name-field-school-number-classroom:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e233";
-  margin-right: 4px;
-}
-
-.views-field-field-school-feature:before,
-.field-name-field-school-feature:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e006";
-  margin-right: 4px;
-}
-
-.field-name-field-school-year-established:before {
-  font-family: "Glyphicons Halflings";
-  content: "\f8ff";
-  margin-right: 4px;
-}
-
-.field-name-field-visa-offered:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e067";
-  margin-right: 4px;
-}
-
-.field-name-field-school-institute-status:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e086";
-  margin-right: 4px;
-}
-
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
@@ -551,23 +476,6 @@ body.show-nav {
     }
   }
 
-  .field-name-field-school-nearest-station,
-  .field-name-field-school-feature {
-    .field-item {
-      margin-right: 10px;
-
-      &:before {
-        font-family: "Glyphicons Halflings";
-        position: relative;
-        top: -2px;
-        font-size: 9px;
-        content: "\e080";
-        color: $brand-primary;
-        margin-right: 5px;
-      }
-    }
-  }
-
   .field-name-field-school-url-fee,
   .field-name-field-school-skype {
     display: inline-block;
@@ -638,41 +546,6 @@ body.show-nav {
   border: 1px solid #eee;
   padding: 10px;
   margin-bottom: 10px;
-}
-
-.field-school-feature {
-  &:before {
-    top: 0px !important;
-    font-size: inherit !important;
-  }
-
-  &.field-school-feature-accepts-beginner-students:before {
-    content: "\f8ff" !important;
-  }
-
-  &.field-school-feature-student-lounge:before {
-    content: "\e013" !important;
-  }
-
-  &.field-school-feature-english-speaking-staff:before {
-    content: "\e233" !important;
-  }
-
-  &.field-school-feature-interact-with-japanese-students:before {
-    content: "\e111" !important;
-  }
-
-  &.field-school-feature-part-time-job-support:before {
-    content: "\e225" !important;
-  }
-
-  &.field-school-feature-support-for-finding-full-time-employment:before {
-    content: "\e139" !important;
-  }
-
-  &.field-school-feature-wifi:before {
-    content: "\e145" !important;
-  }
 }
 
 .logo {
@@ -881,8 +754,7 @@ body.show-nav {
 
 .btn-info {
   color: #fff;
-  background-color: #0091ad;
-  border-color: #007c94;
+  background-color: $brand-primary;
 }
 
 

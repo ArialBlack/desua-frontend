@@ -1,0 +1,201 @@
+$icon-font: "Glyphicons Halflings";
+$font-awesome-font: "FontAwesome";
+
+.views-field-field-school-nearest-station,
+.views-field-field-school-feature {
+  > .field-content {
+    * {
+      display: inline;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      &:before {
+        font-family: $icon-font;
+        position: relative;
+        top: -2px;
+        font-size: 9px;
+        content: "\e080";
+        color: $brand-primary;
+        margin-right: 5px;
+      }
+      margin-right: 10px;
+    }
+  }
+}
+
+.views-field-field-school-feature {
+  .field-item:before {
+    font-family: $font-awesome-font !important;
+  }
+
+  .field-school-feature-accepts-beginner-students:before {
+    content: "\f1ae" !important;
+  }
+
+  .field-school-feature-student-lounge:before {
+    content: "\e080" !important;
+  }
+
+  .field-school-feature-interact-with-japanese-students:before {
+    content: "\e080" !important;
+  }
+
+  .field-school-feature-part-time-job-support:before {
+    content: "\f1da" !important;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: inline-block;
+  }
+
+  .field-school-feature-support-for-finding-full-time-employment {
+    content: "\f017" !important;
+  }
+
+  .field-school-feature-wifi {;
+    content: "\f1eb" !important;
+  }
+}
+
+.views-field-field-school-address .field-content:before,
+.field-name-field-school-address .field-item:before {
+  content: "\f041";
+  margin-right: 8px;
+  font-family: $font-awesome-font;
+}
+
+.views-field-field-school-nearest-station:before,
+.field-name-field-school-nearest-station:before {
+  font-family: $icon-font;
+  content: "\e024";
+  margin-right: 4px;
+}
+
+.views-field-field-school-student-capacity:before,
+.field-name-field-school-student-capacity:before{
+  font-family: $font-awesome-font;
+  content: "\f19d";
+  margin-right: 4px;
+}
+
+.field-name-field-school-number-staff:before {
+  font-family: $font-awesome-font;
+  content: "\f0c0";
+  margin-right: 4px;
+}
+
+.field-name-field-school-number-staff-fullti::before {
+  content: "\f017" !important;
+  font-family: $font-awesome-font;
+  display: inline-block;
+}
+
+
+.views-field-field-school-number-classroom:before,
+.field-name-field-school-number-classroom:before {
+  font-family: $font-awesome-font;
+  content: "\f1ad";
+  margin-right: 4px;
+}
+
+.views-field-field-school-feature:before,
+.field-name-field-school-feature:before {
+  font-family: $font-awesome-font;
+  content: "\f005";
+  margin-right: 4px;
+}
+
+.field-name-field-school-year-established:before {
+  font-family: $font-awesome-font;
+  content: "\f073";
+  margin-right: 4px;
+}
+
+.field-name-field-visa-offered:before {
+  font-family: $icon-font;
+  content: "\e067";
+  margin-right: 4px;
+}
+
+.field-name-field-school-institute-status:before {
+  font-family: $icon-font;
+  content: "\e086";
+  margin-right: 4px;
+}
+
+.field-name-field-school-nearest-station,
+.field-name-field-school-feature {
+  .field-item {
+    margin-right: 10px;
+
+    &:before {
+      position: relative;
+      top: -2px;
+      font-size: 9px;
+      content: "\e080";
+      color: $brand-primary;
+      margin-right: 5px;
+    }
+  }
+}
+
+//school-feature
+.field-school-feature {
+  &:before {
+    top: 0px !important;
+    font-size: inherit !important;
+  }
+
+  &.field-school-feature-accepts-beginner-students:before {
+    content: "\f1ae" !important;
+    font-family: $font-awesome-font;
+  }
+
+  &.field-school-feature-student-lounge:before {
+    content: "\f0f4" !important;
+    font-family: $font-awesome-font;
+  }
+
+  &.field-school-feature-english-speaking-staff:before {
+    content: '';
+    display: inline-block;
+    width: 21px;
+    height: 14px;
+    background-image: url(/sites/all/modules/languageicons/flags/en.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &.field-school-feature-interact-with-japanese-students:before {
+    content: "\f086" !important;
+    font-family: $font-awesome-font;
+  }
+
+  &.field-school-feature-part-time-job-support:before {
+    content: "\f1da" !important;
+    font-family: $font-awesome-font;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: inline-block;
+  }
+
+  &.field-school-feature-support-for-finding-full-time-employment:before {
+    content: "\f017" !important;
+    font-family: $font-awesome-font;
+  }
+
+  &.field-school-feature-wifi:before {
+    content: "\f1eb" !important;
+    font-family: $font-awesome-font;
+  }
+}
