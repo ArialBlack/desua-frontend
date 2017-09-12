@@ -14,8 +14,6 @@
 $icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
 
 $navbar-border-radius: 0;
-$brand-primary: #b7282e;
-$brand-info:    $brand-primary;
 
 $font-size-base: 14px;
 
@@ -29,23 +27,7 @@ $font-size-h6:            ceil(($font-size-base * 0.85));
 $font-family-sans-serif: 'Montserrat', sans-serif;
 
 $navbar-height: 50px;
-$navbar-default-bg: #fff;
 
-// Navbar links
-/*$navbar-default-link-color:                $brand-primary;
-$navbar-default-link-hover-color:          lighten($brand-primary, 20%);
-$navbar-default-link-hover-bg:             transparent;
-$navbar-default-link-active-color:         #222;
-$navbar-default-link-active-bg:            transparent;
-$navbar-default-link-disabled-color:       #ccc;
-$navbar-default-link-disabled-bg:          transparent;
+$brand-primary: #d7003a;
 
-// Navbar brand label
-$navbar-default-brand-color:               $navbar-default-link-color;
-$navbar-default-brand-hover-color:         $navbar-default-link-hover-color;
-$navbar-default-brand-hover-bg:            transparent;*/
 
-// Navbar toggle
-$navbar-default-toggle-hover-bg:           transparent;
-$navbar-default-toggle-icon-bar-bg:        #333;
-$navbar-default-toggle-border-color:       transparent;

@@ -1,8 +1,5 @@
-//@import '_red_variables.scss';
-//@import '_red_bootswatch.scss';
 @import 'default-variables';
 @import '../../../themes/huloa/bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
-
 
 @import 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css';
@@ -10,14 +7,13 @@
 
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,500,700';
 
-
-
 @import 'overrides';
-
-
+@import 'utilites/mixins';
 
 @import 'base';
 @import 'blocks';
+
+@import 'navbar';
 
 @import 'pages/search';
 @import 'pages/school';
