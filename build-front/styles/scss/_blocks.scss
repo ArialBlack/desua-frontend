@@ -41,26 +41,42 @@ form#search-block-form {
   margin-bottom: 0;
 }
 
-/*#block-lang-dropdown-language-content {
-  .form-control {
-    background: none;
-  }
-
-  .btn-group {
-    box-shadow: none;
-  }
-
-  button {
-    background: none;
-    color: white;
-    border: 0;
-  }
-}*/
-
 body.show-nav {
   #block-lang-dropdown-language-content {
     button {
       color: $brand-primary;
+    }
+  }
+}
+
+#block-views-exp-search-page {
+  label {
+    &:before {
+      font-family: $font-awesome-font;
+      content: "\f041";
+      margin-right: 4px;
+      text-transform: uppercase;
+    }
+  }
+
+  .form-control {
+    box-shadow: none;
+  }
+
+  select {
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: $brand-primary 2px solid;
+    outline-color: $brand-primary;
+
+    option {
+      font-weight: bold;
+    }
+
+    option:hover {
+      box-shadow: 0 0 10px 100px $brand-primary inset;
     }
   }
 }

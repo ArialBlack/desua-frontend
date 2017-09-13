@@ -197,8 +197,14 @@ h6 {
   }
 
   form {
-    margin-top: 13px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 3px;
+  }
+
+  .views-exposed-form {
+    .views-exposed-widget {
+      padding-top: 0;
+    }
   }
 }
 
@@ -418,17 +424,25 @@ h6 {
   color: #fff;
   background-color: $brand-primary;
   border-color: $brand-primary;
+
+  &:focus,
+  &.focus,
+  &:hover {
+    color: #fff;
+    background-color: #fe0045;
+    border-color: #fe0045;
+  }
 }
 
+.custom-select {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 
-
-
-
-
-
-
-
-
-
-
-
+  select {
+    padding: 6px 20px 6px 12px;
+    box-shadow: none;
+    position: relative;
+  }
+}
