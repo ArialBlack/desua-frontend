@@ -1,0 +1,82 @@
+$icon-font: "Glyphicons Halflings";
+$font-awesome-font: "FontAwesome";
+
+#block-search-form {
+  max-width: 220px;
+}
+
+// Search form.
+form#search-block-form {
+  margin: 0;
+}
+
+.navbar #block-search-form {
+  float: none;
+  margin: 5px 0 5px 5px;
+  @media #{$normal} {
+    float: right;
+  }
+
+  .input-group-btn {
+    width: auto;
+
+    .btn {
+      color: #fff;
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+
+      .icon:before {
+        font-family: $font-awesome-font !important;
+        content: '\f002';
+      }
+
+      &:hover {
+        background: #fe0045;
+      }
+    }
+  }
+}
+
+.navbar-search .control-group {
+  margin-bottom: 0;
+}
+
+body.show-nav {
+  #block-lang-dropdown-language-content {
+    button {
+      color: $brand-primary;
+    }
+  }
+}
+
+#block-views-exp-search-page {
+  label {
+    &:before {
+      font-family: $font-awesome-font;
+      content: "\f041";
+      margin-right: 4px;
+      text-transform: uppercase;
+    }
+  }
+
+  .form-control {
+    box-shadow: none;
+  }
+
+  select {
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: $brand-primary 2px solid;
+    outline-color: $brand-primary;
+
+    option {
+      font-weight: bold;
+    }
+
+    option:hover {
+      box-shadow: 0 0 10px 100px $brand-primary inset;
+    }
+  }
+}

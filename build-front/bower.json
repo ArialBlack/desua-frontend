@@ -1,0 +1,24 @@
+{
+  "name": "desua_narika_frontend",
+  "description": "D7",
+  "main": "index.js",
+  "authors": [
+    "Andrey Turik"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ArialBlack/desua-frontend",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "../themes/huloa/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "bootstrap-select": "^1.12.4",
+    "select-css": "filamentgroup/select-css#^2.0.3"
+  }
+}

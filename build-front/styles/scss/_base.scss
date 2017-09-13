@@ -1,0 +1,448 @@
+
+@mixin transform($transition) {
+  -ms-transform: $transition;
+  -webkit-transform: $transition;
+  transform: $transition;
+}
+
+$transition: 0.5s;
+
+a,
+button {
+  @include transition($transition);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $brand-primary;
+  font-weight: 700;
+}
+
+.copyright {
+  padding: 30px 0;
+  border-top: 8px solid $brand-primary;
+}
+
+.footer {
+  background: #333;
+  color: $body-bg;
+  border: none;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .block {
+    .block-title {
+      margin-top: 0;
+      font-weight: 500;
+      color: $body-bg;
+    }
+  }
+
+  a {
+    color: $body-bg;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+}
+
+.lang_dropdown_form {
+  .language-icon {
+    display: inline;
+    margin-right: 10px;
+    width: 21px;
+    height: 14px;
+    position: relative;
+    top: -1px;
+    border: 1px solid #ddd;
+  }
+}
+
+.region-navigation {
+  .block {
+    padding: 8px 15px;
+    margin: 0 !important;
+    float: left !important;
+  }
+}
+
+#navbar {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.main-container {
+  margin-top: 25px;
+}
+
+.sidebar {
+  .block {
+    margin-bottom: 40px;
+
+    .block-title {
+      border-bottom: 4px solid $brand-primary;
+      padding-bottom: 7px;
+      font-weight: 700;
+    }
+  }
+}
+
+.node {
+  header {
+    * {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  > * {
+    margin-bottom: 25px;
+  }
+}
+
+.node-content {
+  h1,
+  h2,
+  ul,
+  ol,
+  p,
+  pre,
+  dl,
+  blockquote {
+    margin: 0 0 25px 0;
+  }
+
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+
+  dt {
+    margin-bottom: 0;
+  }
+
+  dd {
+    margin-bottom: 10px;
+  }
+}
+
+.bcc {
+  .breadcrumb {
+    padding: 0;
+    background: none;
+    margin-bottom: 20px;
+    border-left: 3px solid $brand-primary;
+    padding-left: 10px;
+    border-radius: 0;
+
+    > li + li:before {
+      content: "> ";
+    }
+
+    a {
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .breadcrumb {
+      white-space: nowrap;
+    }
+  }
+}
+
+.page-header {
+  @include rft(30, 47);
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.tabs--primary {
+  text-align: right;
+  border: none;
+
+  li {
+    float: none;
+    display: inline-block;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+#top-bar {
+  background: #eee;
+
+  h2 {
+    margin-top: 20px;
+  }
+
+  form {
+    margin-top: 0;
+    margin-bottom: 3px;
+  }
+
+  .views-exposed-form {
+    .views-exposed-widget {
+      padding-top: 0;
+    }
+  }
+}
+
+.form-item-field-school-area-tid {
+  position: relative;
+}
+
+.views-exposed-form {
+  .form-inline {
+    > * {
+      margin-right: 5px;
+      width: auto;
+      max-width: 100%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.node-japaneseschool {
+  .node-content {
+    > .row {
+      margin-bottom: 20px;
+
+      .field-item > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .field-name-field-school-map {
+      iframe {
+        width: 100%;
+        height: 335px;
+      }
+    }
+
+    .galleryformatter {
+      padding-top: 62%;
+      padding-bottom: 80px !important;
+
+      .gallery-slide {
+        margin-top: 0;
+      }
+
+      .gallery-thumbs {
+        li {
+          padding: 0;
+          margin: 0;
+
+          a {
+            padding: 0;
+          }
+        }
+
+        .empty {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .field-name-field-school-name,
+  .field-name-field-school-name-jp {
+    font-size: 18px;
+    font-weight: 700;
+    color: $brand-primary;
+  }
+
+  .field-label,
+  .field-items {
+    display: inline-block;
+    float: none !important
+  }
+
+  .field-label {
+    margin-right: 10px;
+  }
+
+  .field {
+    margin: 5px 0;
+    display: block;
+
+    &:before {
+      display: inline-block;
+    }
+  }
+
+  .field-items {
+    .field-item {
+      display: inline-block;
+    }
+  }
+
+  .field-name-field-school-url-fee,
+  .field-name-field-school-skype {
+    display: inline-block;
+    margin-right: 50px;
+  }
+
+  .field-name-field-school-skype {
+    .field-item {
+      float: left;
+    }
+  }
+
+  .field-name-field-school-url-visa,
+  .field-name-field-school-phone,
+  .field-name-field-school-url-contact-form,
+  .field-name-field-school-address {
+    display: inline-block;
+  }
+
+  .field-name-field-school-phone-area-code,
+  .field-name-field-school-postal-code {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .field-name-field-school-skype {
+    img {
+      margin: 0 !important;
+      vertical-align: 0 !important;
+      width: 60px;
+    }
+
+    .field-item {
+      > div {
+        > p {
+          margin-bottom: 0 !important;
+          font-size: 0 !important;
+        }
+
+      }
+    }
+  }
+
+  .field-name-field-school-image {
+    width: 100%;
+
+    .field-items,
+    .field-item {
+      display: block;
+    }
+  }
+
+  .field-name-field-school-map {
+    width: 100%;
+
+    .field-items,
+    .field-item {
+      width: 100%;
+    }
+  }
+}
+
+.other-information {
+  display: none;
+}
+
+.block-info {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: $screen-md-min) {
+  .search-results {
+    .views-row {
+      .views-field-field-school-image {
+        width: 200px;
+      }
+
+      .views-field-field-school-nearest-station {
+        clear: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .search-results {
+    .views-row {
+      .views-field-field-school-student-capacity,
+      .views-field-field-school-number-classroom {
+        display: inline-block;
+      }
+
+      .views-field-field-school-student-capacity {
+        margin-right: 50px;
+      }
+    }
+  }
+}
+
+.views-exposed-form .views-exposed-widget .btn {
+  margin-top: 1.8em;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+
+  &:focus,
+  &.focus,
+  &:hover {
+    color: #fff;
+    background-color: #fe0045;
+    border-color: #fe0045;
+  }
+}
+
+.custom-select {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  select {
+    padding: 6px 20px 6px 12px;
+    box-shadow: none;
+    position: relative;
+  }
+}

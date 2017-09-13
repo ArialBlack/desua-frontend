@@ -3,28 +3,6 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        svgstore: {
-            logos: {
-                files: {
-                    //'app-assets/images/svg-images-sprite.svg': 'src/images-svg/*.svg'
-                    //use like <span class="svg-image logo"><svg preserveAspectRatio="xMidYMid" focusable="false"><use xlink:href="/app-assets/images/svg-images-sprite.svg#bihus-logo"></use></svg></span>
-                }
-            }
-        },
-
-        bake: {
-            your_target: {
-                options: {
-                    // Task-specific options go here.
-                },
-
-                files: {
-                   // "index.html": "src/html/index.html",
-                    
-                }
-            }
-        },
-
         sass: {
             options: {
                 precision: 6,
@@ -36,10 +14,9 @@ module.exports = function(grunt) {
             },
             main: {
                 files: {
-                    'app-assets/css/bootstrap.css': 'app-assets/scss/bootstrap.scss',
+                    '../themes/huloa/css/style.css': 'styles/scss/style.scss',
                 }
-            },
-
+            }
         },
 
         watch: {
@@ -47,53 +24,31 @@ module.exports = function(grunt) {
                 files: ['Gruntfile.js']
             },
 
-            svgstore: {
-                files: [
-                    'src/images-svg/*.svg'
-                ],
-                tasks: [ 'svgstore']
-            },
-
-            bake: {
-                files: [
-                    'src/html/**/*.html'
-                ],
-                tasks: ['bake']
-            },
-
             sass: {
                 files: [
-                    'app-assets/scss/**/*.scss',
-                    'assets/scss/**/*.scss'
+                    'styles/scss/**/*.scss'
                 ],
                 tasks: ['sass']
             }
         },
 
-        browserSync: {
-            bsFiles: {
-                src : [
-                    'assets/css/**/*.css',
-                    'app-assets/css/**/*.css',
-                    './*.html',
-                    'app-assets/js/**/*.js',
-                    'assets/js/**/*.js'
-                ]
-                },
+        postcss: {
             options: {
-                watchTask: true,
-                server: './'
+                processors: [
+                    require('autoprefixer')({browsers: ['last 2 versions', 'ie 10']})
+                ]
+            },
+            dist: {
+                src: '../themes/huloa/css/style.css'
             }
         }
 
     });
 
     // load npm modules
-    grunt.loadNpmTasks('grunt-bake');
-    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-svgstore');
+    grunt.loadNpmTasks('grunt-postcss');
 
-    grunt.registerTask('default', ['svgstore', 'bake', 'sass:main', 'sass:core', 'sass:pages', 'sass:plugins', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['sass:main', 'postcss', 'watch']);
 };
