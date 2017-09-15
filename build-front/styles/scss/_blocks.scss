@@ -60,15 +60,15 @@ body.show-nav {
   }
 
   .form-control {
-    box-shadow: none;
+    //box-shadow: none;
   }
 
   select {
-    border-radius: 0;
-    background: none;
-    box-shadow: none;
-    border: none;
-    border-bottom: $brand-primary 2px solid;
+    //border-radius: 0;
+    //background: none;
+   // box-shadow: none;
+    //border: none;
+    //border-bottom: $brand-primary 2px solid;
     outline-color: $brand-primary;
 
     option {
@@ -76,7 +76,7 @@ body.show-nav {
     }
 
     option:hover {
-      box-shadow: 0 0 10px 100px $brand-primary inset;
+      //box-shadow: 0 0 10px 100px $brand-primary inset;
     }
   }
 }

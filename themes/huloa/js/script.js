@@ -20,7 +20,7 @@
         });
 
 
-        $('#top-bar select').wrap('<div class="custom-select"></div>');
+        //$('#top-bar select').wrap('<div class="custom-select"></div>');
     });
 
     $(document).on('DOMNodeInserted', '.views-exposed-form .shs-select', function (e) {
